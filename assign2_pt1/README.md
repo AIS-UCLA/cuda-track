@@ -17,7 +17,7 @@ In this assignment you will learn how to improve a naive matmul kernel all the w
 
 
 ## Nsight Compute Profiling
-In addition to GPU programming, one should also become familar with GPU profiling. I recommend downloading [Nsight Compute](https://developer.nvidia.com/nsight-compute) to use the UI. Answer the following short questions as you finish the implementation for each kernel. Run `ncu --set detailed python3 test_sgemm.py arg` to do the profiling in the CLI or ` ncu --set detailed --import-source yes --export reports/sgemm_all python3 test_sgemm.py -arg` to produce a `.ncu-rep file` to use the NCU UI on.
+In addition to GPU programming, one should also become familar with GPU profiling. I recommend downloading [Nsight Compute](https://developer.nvidia.com/nsight-compute) to use the UI. Answer the following short questions as you finish the implementation for each kernel. Run `ncu --set detailed python3 test_sgemm.py arg` to do the profiling in the CLI or ` ncu --set full --import-source yes --export reports/sgemm_all python3 test_sgemm.py -arg` to produce a `.ncu-rep file` to use the NCU UI on.
 
 ### Kernel 1: Naive
 Look at Memory Worklord Analysis Section, how high is the Mem Bsy [%] statistic? Also take a look at Compute Worklord Analysis, how low is the SM Busy [%] statistic? What does this tell us about the naive kernel?
